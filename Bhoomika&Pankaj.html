@@ -3184,5 +3184,10 @@ document.addEventListener('visibilitychange', () => {
     resizeCanvases();
     requestAnimationFrame(loop);
   </script>
+  <script>
+    document.addEventListener('click', () => {
+      if (!AUD.muted && (!AUD.ctx || AUD.ctx.paused)) startAudio();
+    }, { once: true });
+  </script>
 </body>
 </html>
